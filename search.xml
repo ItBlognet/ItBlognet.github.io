@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Nginx反爬虫策略，禁止某些UA抓取网站</title>
+      <link href="/2020/06/29/nginx-fan-pa-chong-ce-lue-jin-zhi-mou-xie-ua-zhua-qu-wang-zhan/"/>
+      <url>/2020/06/29/nginx-fan-pa-chong-ce-lue-jin-zhi-mou-xie-ua-zhua-qu-wang-zhan/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Nginx反爬虫策略，禁止某些UA抓取网站"><a href="#Nginx反爬虫策略，禁止某些UA抓取网站" class="headerlink" title="Nginx反爬虫策略，禁止某些UA抓取网站"></a>Nginx反爬虫策略，禁止某些UA抓取网站</h2><p>目前网络上的爬虫非常多，有对网站收录有益的，比如百度蜘蛛（Baiduspider），也有不但不遵守robots规则对服务器造成压力，还不能为网站带来流量的无用爬虫，为防止网站有可能会被别人爬，通过配置Nginx, 我们可以拦截大部分爬虫</p><p>新增反爬虫策略文件：</p><pre><code>vim /usr/www/server/nginx/conf/anti_spider.conf</code></pre><p>文件内容</p><pre><code>#禁止Scrapy等工具的抓取  if ($http_user_agent ~* (Scrapy|Curl|HttpClient)) {       return 403;  }  #禁止指定UA及UA为空的访问  if ($http_user_agent ~ &quot;WinHttp|WebZIP|FetchURL|node-superagent|java/|FeedDemon|Jullo|JikeSpider|Indy Library|Alexa Toolbar|AskTbFXTV|AhrefsBot|CrawlDaddy|Java|Feedly|Apache-HttpAsyncClient|UniversalFeedParser|ApacheBench|Microsoft URL Control|Swiftbot|ZmEu|oBot|jaunty|Python-urllib|lightDeckReports Bot|YYSpider|DigExt|HttpClient|MJ12bot|heritrix|EasouSpider|Ezooms|BOT/0.1|YandexBot|FlightDeckReports|Linguee Bot|^$&quot; ) {       return 403;               }  #禁止非GET|HEAD|POST方式的抓取  if ($request_method !~ ^(GET|HEAD|POST)$) {      return 403;  }#屏蔽单个IP的命令是#deny 123.45.6.7#封整个段即从123.0.0.1到123.255.255.254的命令#deny 123.0.0.0/8#封IP段即从123.45.0.1到123.45.255.254的命令#deny 124.45.0.0/16#封IP段即从123.45.6.1到123.45.6.254的命令是#deny 123.45.6.0/24# 以下IP皆为流氓#deny 58.95.66.0/24;</code></pre><p>配置使用</p><p>在站点的server中引入</p><pre><code># 反爬虫    include /usr/www/server/nginx/conf/anti_spider.conf</code></pre><p>最后重启nginx</p><p>校验是否有效</p><p>模拟YYSpider</p><pre><code>λ curl -X GET -I -A &#39;YYSpider&#39; https://www.myong.topHTTP/1.1 200 Connection establishedHTTP/2 403server: marco/2.11date: Fri, 20 Mar 2020 08:48:50 GMTcontent-type: text/htmlcontent-length: 146x-source: C/403x-request-id: 3ed800d296a12ebcddc4d61c57500aa2</code></pre><p>模拟百度Baiduspider</p><pre><code>λ curl -X GET -I -A &#39;BaiduSpider&#39; https://www.baidu.comHTTP/1.1 200 Connection establishedHTTP/2 200server: marco/2.11date: Fri, 20 Mar 2020 08:00:00 GMTcontent-type: text/htmlvary: Accept-Encodingx-source: C/200last-modified: Wed, 18 Mar 2020 13:16:50 GMTetag: &quot;5e721f42-150ce&quot;x-request-id: e82999a78b7d7ea2e9ff18b6f1f4cc84</code></pre><p>爬虫常见的User-Agent</p><pre><code>FeedDemon             内容采集  BOT/0.1 (BOT for JCE) sql注入  CrawlDaddy            sql注入  Java                  内容采集  Jullo                 内容采集  Feedly                内容采集  UniversalFeedParser   内容采集  ApacheBench           cc攻击器  Swiftbot              无用爬虫  YandexBot             无用爬虫  AhrefsBot             无用爬虫  YisouSpider           无用爬虫（已被UC神马搜索收购，此蜘蛛可以放开！）  jikeSpider            无用爬虫  MJ12bot               无用爬虫  ZmEu phpmyadmin       漏洞扫描  WinHttp               采集cc攻击  EasouSpider           无用爬虫  HttpClient            tcp攻击  Microsoft URL Control 扫描  YYSpider              无用爬虫  jaunty                wordpress爆破扫描器  oBot                  无用爬虫  Python-urllib         内容采集  Indy Library          扫描  FlightDeckReports Bot 无用爬虫  Linguee Bot           无用爬虫</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Nginx </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL查询表结构命令</title>
+      <link href="/2020/06/29/mysql-zhong-innodb-he-myisam-qu-bie/"/>
+      <url>/2020/06/29/mysql-zhong-innodb-he-myisam-qu-bie/</url>
+      
+        <content type="html"><![CDATA[<h6 id="MySQL中InnoDB和MyISAM区别"><a href="#MySQL中InnoDB和MyISAM区别" class="headerlink" title="MySQL中InnoDB和MyISAM区别"></a>MySQL中InnoDB和MyISAM区别</h6><h6 id="1、事务和外键"><a href="#1、事务和外键" class="headerlink" title="1、事务和外键"></a>1、事务和外键</h6><p>InnoDB具有事务，支持4个事务隔离级别，回滚，崩溃修复能力和多版本并发的事务安全，包括ACID.如果应用中需要执行大量的INSERT或UPDATE操作，则应该使用InnoDB,这样可以提高多用户并发操作的性能。</p><p>MyISAM管理非事务表，提供高速存储和检索，以及全文搜索能力，如果应用中需要执行大量的SELECT查询，那么MyISAM是更好的选择。</p><h6 id="2、全文索引"><a href="#2、全文索引" class="headerlink" title="2、全文索引"></a>2、全文索引</h6><p>InnoDB不支持全文索引，如果一定要，最好使用sphinx等搜索引擎。</p><p>MyISAM对中文支持的不是很好，新版的InnoDB已经支持了</p><h6 id="3、锁"><a href="#3、锁" class="headerlink" title="3、锁"></a>3、锁</h6><p>MySQL支持三种锁定级别，行级，页级，表级；</p><p>MyISAM支持表级锁定，InnoDB表的行锁也不是绝对的，如果在执行一个SQL语句时MyISAM不能确定要扫描的范围，InnoDB表同样会锁全表，</p><p>例如</p><pre><code>UPDATE table SET num=1 WHERE name LIKE &#39;%aaa%&#39;</code></pre><h6 id="4、存储"><a href="#4、存储" class="headerlink" title="4、存储"></a>4、存储</h6><p>MyISAM在磁盘上存储成三个文件，第一个文件的名字以表的名字开始，扩展名指出文件类型，.frm文件存储表定义，数据文件扩展名为.MYD，索引文件的扩展名是.MYI</p><p>InnoDB基于磁盘的资源是InnoDB表空间数据文件和它的日志文件，InnoDB表的大小只受限于操作系统文件的大小</p><pre><code>注意：MyISAM表是保存成文件形式，在跨平台的数据转移中使用MyISAM存储省去不少麻烦</code></pre><h6 id="5、索引"><a href="#5、索引" class="headerlink" title="5、索引"></a>5、索引</h6><p>InnoDB（索引组织表）使用的聚簇索引，索引就是数据，顺序存储，因此能缓存索引，也能缓存数据</p><p>MyISAM（堆组织表）使用的是非聚簇索引，索引和文件分开，随机存储，只能缓存索引</p><h6 id="6、并发"><a href="#6、并发" class="headerlink" title="6、并发"></a>6、并发</h6><p>MyISAM读写互相阻塞，不仅在写入的时候阻塞读取，还会在读取的时候阻塞写入，但读本身并不会阻塞另外的读</p><p>InnoDB读写阻塞与事务隔离级别相关</p><h6 id="表格对比"><a href="#表格对比" class="headerlink" title="表格对比"></a>表格对比</h6><table><thead><tr><th>属性</th><th>MyISAM</th><th>InnoDB</th></tr></thead><tbody><tr><td>事务</td><td>不支持</td><td>支持</td></tr><tr><td>锁粒度</td><td>表锁</td><td>行锁</td></tr><tr><td>存储</td><td>拆分文件</td><td>表空间</td></tr><tr><td>隔离等级</td><td>无</td><td>所有</td></tr><tr><td>可移植格式</td><td>是</td><td>是</td></tr><tr><td>引用完整性</td><td>否</td><td>是</td></tr><tr><td>数据主键</td><td>否</td><td>是</td></tr><tr><td>MySQL缓存数据记录</td><td>无</td><td>有</td></tr><tr><td>可用性</td><td>全版本</td><td>全版本</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL查询表结构命令</title>
+      <link href="/2020/06/29/mysql-cha-xun-biao-jie-gou-ming-ling/"/>
+      <url>/2020/06/29/mysql-cha-xun-biao-jie-gou-ming-ling/</url>
+      
+        <content type="html"><![CDATA[<h6 id="MySQL查询表结构命令"><a href="#MySQL查询表结构命令" class="headerlink" title="MySQL查询表结构命令"></a>MySQL查询表结构命令</h6><h6 id="1、查询表结构"><a href="#1、查询表结构" class="headerlink" title="1、查询表结构"></a>1、查询表结构</h6><p>主要显示字段类型主键是否允许为空等</p><pre><code>DESC 表名;</code></pre><p>结果显示</p><table><thead><tr><th align="left">Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default</th><th>Extra</th></tr></thead><tbody><tr><td align="left">id</td><td>int(11)</td><td>NO</td><td>PRI</td><td></td><td>auto_increment</td></tr><tr><td align="left">name</td><td>varchar(100)</td><td>NO</td><td></td><td></td><td></td></tr><tr><td align="left">email</td><td>varchar(100)</td><td>YES</td><td></td><td></td><td></td></tr></tbody></table><h6 id="2、查看表中字段基本信息"><a href="#2、查看表中字段基本信息" class="headerlink" title="2、查看表中字段基本信息"></a>2、查看表中字段基本信息</h6><p>如下查看字段的注释</p><pre><code>SELECT table_name,column_name,column_commentFROM information_schema.columns WHERE table_schema =&#39;tests&#39; AND table_name = &#39;user&#39;</code></pre><p>结果显示</p><table><thead><tr><th>table_name</th><th>column_name</th><th>column_comment</th></tr></thead><tbody><tr><td>t_test</td><td>id</td><td>主键</td></tr><tr><td>t_test</td><td>name</td><td>用户名</td></tr><tr><td>t_test</td><td>email</td><td>邮箱</td></tr></tbody></table><h6 id="3、查看数据库中表结构信息"><a href="#3、查看数据库中表结构信息" class="headerlink" title="3、查看数据库中表结构信息"></a>3、查看数据库中表结构信息</h6><p>如下显示表的注释信息，查询所有信息使用<code>*</code></p><pre><code>SELECT table_name, table_comment FROM information_schema.TABLES WHERE table_schema = &#39;tests&#39;</code></pre><p>结果显示</p><table><thead><tr><th>table_name</th><th>table_comment</th></tr></thead><tbody><tr><td>user</td><td>用户表</td></tr><tr><td>log</td><td>操作日志表</td></tr></tbody></table><p>4、查看表的DDL语句</p><pre><code>show create table user;</code></pre><p>结果显示</p><table><thead><tr><th align="left">Table</th><th>Create_Table</th></tr></thead><tbody><tr><td align="left">user</td><td>CREATE TABLE user (id int(11) NOT NULL AUTO_INCREMENT, name varchar(100) NOT NULL DEFAULT ‘用户名’, email` varchar(100) DEFAULT NULL COMMENT ‘邮箱’,PRIMARY KEY (id)) ENGINE=InnoDB AUTO_INCREMENT=252 DEFAULT CHARSET=utf8</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Redis常见使用场景</title>
+      <link href="/2020/06/29/redis-chang-jian-shi-yong-chang-jing/"/>
+      <url>/2020/06/29/redis-chang-jian-shi-yong-chang-jing/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Redis常见使用场景"><a href="#Redis常见使用场景" class="headerlink" title="Redis常见使用场景"></a>Redis常见使用场景</h2><p>Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。本篇文章，主要介绍利用PHP使用Redis，主要的应用场景。</p><h6 id="1、字符串缓存"><a href="#1、字符串缓存" class="headerlink" title="1、字符串缓存"></a>1、字符串缓存</h6><pre><code>$redis-&gt;connect(&#39;127.0.0.1&#39;, 6379);$cacheKey  = &#39;cache1&#39;;//SET 应用$arrCacheData = [&#39;name&#39;=&gt;&#39;job&#39;,&#39;sex&#39;=&gt;&#39;男&#39;,&#39;age&#39;=&gt;&#39;30&#39;];$redis-&gt;set($cacheKey, json_encode($arrCacheData));$redis-&gt;expire($cacheKey, 30);  # 设置30秒后过期$json_data = $redis-&gt;get($cacheKey);$data = json_decode($json_data， true);print_r($data[&#39;age&#39;]); //输出数据//HSET 应用$arrWebSite = [    &#39;a&#39;=&gt;[&#39;aa&#39;,&#39;1234&#39;],    &#39;b&#39;=&gt;[&#39;bb&#39;,&#39;56789&#39;],];$redis-&gt;hSet($cacheKey, &#39;a&#39;, json_encode($arrWebSite[&#39;a&#39;]));$json_data = $redis-&gt;hGet($cacheKey, &#39;a&#39;);$data = json_decode($json_data);print_r($data); //输出数据复制代码</code></pre><h6 id="2、队列"><a href="#2、队列" class="headerlink" title="2、队列"></a>2、队列</h6><pre><code>$redis-&gt;connect(&#39;127.0.0.1&#39;, 6379);$queuekey  = &#39;queue&#39;;//进队列$redis-&gt;rpush($queuekey, json_encode([&#39;uid&#39; =&gt; 1,&#39;name&#39; =&gt; &#39;Job&#39;]));$redis-&gt;rpush($queuekey, json_encode([&#39;uid&#39; =&gt; 2,&#39;name&#39; =&gt; &#39;Tom&#39;]));$redis-&gt;rpush($queuekey, json_encode([&#39;uid&#39; =&gt; 3,&#39;name&#39; =&gt; &#39;John&#39;]));echo &quot;---- 进队列成功 ---- &lt;br/&gt;&quot;;//查看队列$strCount = $redis-&gt;lrange($queuekey, 0, -1);echo &quot;当前队列数据为： &lt;br /&gt;&quot;;print_r($strCount);//出队列$redis-&gt;lpop($queuekey);echo &quot;&lt;br/&gt; ---- 出队列成功 ---- &lt;br /&gt;&quot;;//查看队列$strCount = $redis-&gt;lrange($queuekey, 0, -1);echo &quot;当前队列数据为： &lt;br /&gt;&quot;;print_r($strCount);</code></pre><h6 id="3、发布订阅"><a href="#3、发布订阅" class="headerlink" title="3、发布订阅"></a>3、发布订阅</h6><pre><code>//以下是 pub.php 文件的内容 cli下运行ini_set(&#39;default_socket_timeout&#39;, -1);$redis-&gt;connect(&#39;127.0.0.1&#39;, 6379);$strChannel = &#39;test_channel&#39;;//发布$redis-&gt;publish($strChannel, &quot;来自{$strChannel}频道的推送&quot;);echo &quot;---- {$strChannel} ---- 频道消息推送成功～ &lt;br/&gt;&quot;;$redis-&gt;close();//以下是 sub.php 文件内容 cli下运行ini_set(&#39;default_socket_timeout&#39;, -1);$redis-&gt;connect(&#39;127.0.0.1&#39;, 6379);$strChannel = &#39;test_channel&#39;;//订阅echo &quot;---- 订阅{$strChannel}这个频道，等待消息推送...----  &lt;br/&gt;&lt;br/&gt;&quot;;$redis-&gt;subscribe([$strChannel], &#39;callBackFun&#39;);function callBackFun($redis, $channel, $msg){    print_r([        &#39;redis&#39; =&gt; $redis,             &#39;channel&#39; =&gt; $channel,               &#39;msg&#39; =&gt; $msg    ]);}</code></pre><h6 id="4、计数器"><a href="#4、计数器" class="headerlink" title="4、计数器"></a>4、计数器</h6><pre><code>$redis-&gt;connect(&#39;127.0.0.1&#39;, 6379);$strKey = &#39;test_comments&#39;;//设置初始值$redis-&gt;set($strKey, 0);$redis-&gt;INCR($strKey);  //+1$redis-&gt;INCR($strKey);  //+1$redis-&gt;INCR($strKey);  //+1$strNowCount = $redis-&gt;get($strKey);echo &quot;---- 当前数量为{$strNowCount}。 ---- &quot;;</code></pre><h6 id="5、排行榜"><a href="#5、排行榜" class="headerlink" title="5、排行榜"></a>5、排行榜</h6><pre><code>$redis-&gt;connect(&#39;127.0.0.1&#39;, 6379);$strKey = &#39;test_score&#39;;//存储数据$redis-&gt;zadd($strKey, &#39;50&#39;, json_encode([&#39;name&#39; =&gt; &#39;Tom&#39;]));$redis-&gt;zadd($strKey, &#39;70&#39;, json_encode([&#39;name&#39; =&gt; &#39;John&#39;]));$redis-&gt;zadd($strKey, &#39;90&#39;, json_encode([&#39;name&#39; =&gt; &#39;Jerry&#39;]));$redis-&gt;zadd($strKey, &#39;30&#39;, json_encode([&#39;name&#39; =&gt; &#39;Job&#39;]));$redis-&gt;zadd($strKey, &#39;100&#39;, json_encode([&#39;name&#39; =&gt; &#39;LiMing&#39;]));$dataOne = $redis-&gt;ZREVRANGE($strKey, 0, -1, true);echo &quot;---- {$strKey}由大到小的排序 ----&lt;br /&gt;&quot;;print_r($dataOne);$dataTwo = $redis-&gt;ZRANGE($strKey, 0, -1, true);echo &quot;&lt;br /&gt;---- {$strKey}由小到大的排序 ----&lt;br /&gt;&quot;;print_r($dataTwo);</code></pre><h6 id="6、字符串悲观锁"><a href="#6、字符串悲观锁" class="headerlink" title="6、字符串悲观锁"></a>6、字符串悲观锁</h6><p>解释：悲观锁(Pessimistic Lock), 顾名思义，就是很悲观。</p><p>每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁。</p><p>场景：如果项目中使用了缓存且对缓存设置了超时时间。</p><p>当并发量比较大的时候，如果没有锁机制，那么缓存过期的瞬间，</p><p>大量并发请求会穿透缓存直接查询数据库，造成雪崩效应。</p><pre><code>/** * 获取锁 * @param  String  $key    锁标识 * @param  Int     $expire 锁过期时间 * @return Boolean */public function lock($key = &#39;&#39;, $expire = 5) {      $is_lock = $this-&gt;_redis-&gt;setnx($key, time()+$expire);    //不能获取锁     if(!$is_lock){        //判断锁是否过期          $lock_time = $this-&gt;_redis-&gt;get($key);        //锁已过期，删除锁，重新获取             if (time() &gt; $lock_time) {            unlock($key);            $is_lock = $this-&gt;_redis-&gt;setnx($key, time() + $expire);        }    }       return $is_lock? true : false;}/** * 释放锁 * @param  String  $key 锁标识 * @return Boolean */public function unlock($key = &#39;&#39;){      return $this-&gt;_redis-&gt;del($key);}// 定义锁标识$key = &#39;test_lock&#39;;// 获取锁$is_lock = lock($key, 10);if ($is_lock) {     echo &#39;get lock success&lt;br&gt;&#39;;      echo &#39;do sth..&lt;br&gt;&#39;;    sleep(5);       echo &#39;success&lt;br&gt;&#39;;    unlock($key);} else {     //获取锁失败        echo &#39;request too frequently&lt;br&gt;&#39;;}</code></pre><h6 id="7、事务乐观锁"><a href="#7、事务乐观锁" class="headerlink" title="7、事务乐观锁"></a>7、事务乐观锁</h6><p>解释：乐观锁(Optimistic Lock), 顾名思义，就是很乐观。</p><p>每次去拿数据的时候都认为别人不会修改，所以不会上锁。</p><p>watch命令会监视给定的key，当exec时候如果监视的key从调用watch后发生过变化，则整个事务会失败。</p><p>也可以调用watch多次监视多个key。这样就可以对指定的key加乐观锁了。</p><p>注意watch的key是对整个连接有效的，事务也一样。</p><p>如果连接断开，监视和事务都会被自动清除。</p><p>当然了exec，discard，unwatch命令都会清除连接中的所有监视。</p><pre><code>$strKey = &#39;test_age&#39;;$redis-&gt;set($strKey,10);$age = $redis-&gt;get($strKey);echo &quot;---- Current Age:{$age} ---- &lt;br/&gt;&quot;;$redis-&gt;watch($strKey);// 开启事务$redis-&gt;multi();//在这个时候新开了一个新会话执行$redis-&gt;set($strKey,30);  //新会话echo &quot;---- Current Age:{$age} ---- &lt;br/&gt;&quot;;//30$redis-&gt;set($strKey,20);$redis-&gt;exec();$age = $redis-&gt;get($strKey);echo &quot;---- Current Age:{$age} ---- &lt;br/&gt;&quot;; //30//当exec时候如果监视的key从调用watch后发生过变化，则整个事务会失败复制代码</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Redis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Redis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>奇遇少年</title>
+  
+  <subtitle>闪烁之星</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://itblognet.github.io/"/>
+  <updated>2020-06-29T08:12:09.791Z</updated>
+  <id>https://itblognet.github.io/</id>
+  
+  <author>
+    <name>少年</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx反爬虫策略，禁止某些UA抓取网站</title>
+    <link href="https://itblognet.github.io/2020/06/29/nginx-fan-pa-chong-ce-lue-jin-zhi-mou-xie-ua-zhua-qu-wang-zhan/"/>
+    <id>https://itblognet.github.io/2020/06/29/nginx-fan-pa-chong-ce-lue-jin-zhi-mou-xie-ua-zhua-qu-wang-zhan/</id>
+    <published>2020-06-29T14:00:00.000Z</published>
+    <updated>2020-06-29T08:12:09.791Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Nginx反爬虫策略，禁止某些UA抓取网站&quot;&gt;&lt;a href=&quot;#Nginx反爬虫策略，禁止某些UA抓取网站&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Nginx" scheme="https://itblognet.github.io/categories/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="https://itblognet.github.io/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL查询表结构命令</title>
+    <link href="https://itblognet.github.io/2020/06/29/mysql-zhong-innodb-he-myisam-qu-bie/"/>
+    <id>https://itblognet.github.io/2020/06/29/mysql-zhong-innodb-he-myisam-qu-bie/</id>
+    <published>2020-06-29T11:30:00.000Z</published>
+    <updated>2020-06-29T08:09:42.630Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h6 id=&quot;MySQL中InnoDB和MyISAM区别&quot;&gt;&lt;a href=&quot;#MySQL中InnoDB和MyISAM区别&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="MySQL" scheme="https://itblognet.github.io/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://itblognet.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL查询表结构命令</title>
+    <link href="https://itblognet.github.io/2020/06/29/mysql-cha-xun-biao-jie-gou-ming-ling/"/>
+    <id>https://itblognet.github.io/2020/06/29/mysql-cha-xun-biao-jie-gou-ming-ling/</id>
+    <published>2020-06-29T11:00:00.000Z</published>
+    <updated>2020-06-29T08:09:44.969Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h6 id=&quot;MySQL查询表结构命令&quot;&gt;&lt;a href=&quot;#MySQL查询表结构命令&quot; class=&quot;headerlink&quot; title=&quot;MySQL查询表结构命令&quot;&gt;&lt;/a&gt;MySQL查询表结构命令&lt;/h6&gt;&lt;h6 id=&quot;1、查询表结构&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="MySQL" scheme="https://itblognet.github.io/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://itblognet.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis常见使用场景</title>
+    <link href="https://itblognet.github.io/2020/06/29/redis-chang-jian-shi-yong-chang-jing/"/>
+    <id>https://itblognet.github.io/2020/06/29/redis-chang-jian-shi-yong-chang-jing/</id>
+    <published>2020-06-29T10:00:00.000Z</published>
+    <updated>2020-06-29T08:12:13.163Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Redis常见使用场景&quot;&gt;&lt;a href=&quot;#Redis常见使用场景&quot; class=&quot;headerlink&quot; title=&quot;Redis常见使用场景&quot;&gt;&lt;/a&gt;Redis常见使用场景&lt;/h2&gt;&lt;p&gt;Redis是一个开源的使用ANSI
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Redis" scheme="https://itblognet.github.io/categories/Redis/"/>
+    
+    
+      <category term="Redis" scheme="https://itblognet.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+</feed>
