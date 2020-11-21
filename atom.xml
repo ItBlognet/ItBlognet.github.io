@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itblognet.github.io/"/>
-  <updated>2020-06-29T08:12:09.791Z</updated>
+  <updated>2020-11-21T09:05:21.616Z</updated>
   <id>https://itblognet.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Nginx反爬虫策略，禁止某些UA抓取网站</title>
-    <link href="https://itblognet.github.io/2020/06/29/nginx-fan-pa-chong-ce-lue-jin-zhi-mou-xie-ua-zhua-qu-wang-zhan/"/>
-    <id>https://itblognet.github.io/2020/06/29/nginx-fan-pa-chong-ce-lue-jin-zhi-mou-xie-ua-zhua-qu-wang-zhan/</id>
-    <published>2020-06-29T14:00:00.000Z</published>
-    <updated>2020-06-29T08:12:09.791Z</updated>
+    <title>图书管理系统需求调研提纲</title>
+    <link href="https://itblognet.github.io/2020/11/11/tu-shu-guan-li-xi-tong-xu-qiu-diao-yan-ti-gang/"/>
+    <id>https://itblognet.github.io/2020/11/11/tu-shu-guan-li-xi-tong-xu-qiu-diao-yan-ti-gang/</id>
+    <published>2020-11-11T14:00:00.000Z</published>
+    <updated>2020-11-21T09:05:21.616Z</updated>
     
     <summary type="html">
     
@@ -29,26 +29,26 @@
       
         
         
-          &lt;h2 id=&quot;Nginx反爬虫策略，禁止某些UA抓取网站&quot;&gt;&lt;a href=&quot;#Nginx反爬虫策略，禁止某些UA抓取网站&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;图书管理系统需求调研提纲&quot;&gt;&lt;a href=&quot;#图书管理系统需求调研提纲&quot; class=&quot;headerlink&quot; title=&quot;图书管理系统需求调研提纲&quot;&gt;&lt;/a&gt;图书管理系统需求调研提纲&lt;/h2&gt;&lt;h4 id=&quot;一、总体需求分析&quot;&gt;&lt;a
         
       
     
     </summary>
     
     
-      <category term="Nginx" scheme="https://itblognet.github.io/categories/Nginx/"/>
+      <category term="UML" scheme="https://itblognet.github.io/categories/UML/"/>
     
     
-      <category term="Nginx" scheme="https://itblognet.github.io/tags/Nginx/"/>
+      <category term="UML" scheme="https://itblognet.github.io/tags/UML/"/>
     
   </entry>
   
   <entry>
-    <title>MySQL查询表结构命令</title>
-    <link href="https://itblognet.github.io/2020/06/29/mysql-zhong-innodb-he-myisam-qu-bie/"/>
-    <id>https://itblognet.github.io/2020/06/29/mysql-zhong-innodb-he-myisam-qu-bie/</id>
-    <published>2020-06-29T11:30:00.000Z</published>
-    <updated>2020-06-29T08:09:42.630Z</updated>
+    <title>吃热狗程序开发</title>
+    <link href="https://itblognet.github.io/2020/11/11/chi-re-gou-cheng-xu-kai-fa/"/>
+    <id>https://itblognet.github.io/2020/11/11/chi-re-gou-cheng-xu-kai-fa/</id>
+    <published>2020-11-11T14:00:00.000Z</published>
+    <updated>2020-11-21T10:43:37.478Z</updated>
     
     <summary type="html">
     
@@ -56,26 +56,26 @@
       
         
         
-          &lt;h6 id=&quot;MySQL中InnoDB和MyISAM区别&quot;&gt;&lt;a href=&quot;#MySQL中InnoDB和MyISAM区别&quot; class=&quot;headerlink&quot;
+          &lt;h4 id=&quot;项目介绍&quot;&gt;&lt;a href=&quot;#项目介绍&quot; class=&quot;headerlink&quot; title=&quot;项目介绍&quot;&gt;&lt;/a&gt;项目介绍&lt;/h4&gt;&lt;h5 id=&quot;程序目标描述（即开发的目的）：&quot;&gt;&lt;a href=&quot;#程序目标描述（即开发的目的）：&quot;
         
       
     
     </summary>
     
     
-      <category term="MySQL" scheme="https://itblognet.github.io/categories/MySQL/"/>
+      <category term="JAVA" scheme="https://itblognet.github.io/categories/JAVA/"/>
     
     
-      <category term="MySQL" scheme="https://itblognet.github.io/tags/MySQL/"/>
+      <category term="JAVA" scheme="https://itblognet.github.io/tags/JAVA/"/>
     
   </entry>
   
   <entry>
-    <title>MySQL查询表结构命令</title>
-    <link href="https://itblognet.github.io/2020/06/29/mysql-cha-xun-biao-jie-gou-ming-ling/"/>
-    <id>https://itblognet.github.io/2020/06/29/mysql-cha-xun-biao-jie-gou-ming-ling/</id>
-    <published>2020-06-29T11:00:00.000Z</published>
-    <updated>2020-06-29T08:09:44.969Z</updated>
+    <title>图书管理系统软件开发模型确认</title>
+    <link href="https://itblognet.github.io/2020/11/05/tu-shu-guan-li-xi-tong-ruan-jian-kai-fa-mo-xing-que-ren/"/>
+    <id>https://itblognet.github.io/2020/11/05/tu-shu-guan-li-xi-tong-ruan-jian-kai-fa-mo-xing-que-ren/</id>
+    <published>2020-11-05T10:00:00.000Z</published>
+    <updated>2020-11-21T09:07:59.980Z</updated>
     
     <summary type="html">
     
@@ -83,26 +83,26 @@
       
         
         
-          &lt;h6 id=&quot;MySQL查询表结构命令&quot;&gt;&lt;a href=&quot;#MySQL查询表结构命令&quot; class=&quot;headerlink&quot; title=&quot;MySQL查询表结构命令&quot;&gt;&lt;/a&gt;MySQL查询表结构命令&lt;/h6&gt;&lt;h6 id=&quot;1、查询表结构&quot;&gt;&lt;a
+          &lt;h4 id=&quot;1-瀑布模型&quot;&gt;&lt;a href=&quot;#1-瀑布模型&quot; class=&quot;headerlink&quot; title=&quot;1. 瀑布模型&quot;&gt;&lt;/a&gt;&lt;strong&gt;1.&lt;/strong&gt;
         
       
     
     </summary>
     
     
-      <category term="MySQL" scheme="https://itblognet.github.io/categories/MySQL/"/>
+      <category term="UML" scheme="https://itblognet.github.io/categories/UML/"/>
     
     
-      <category term="MySQL" scheme="https://itblognet.github.io/tags/MySQL/"/>
+      <category term="UML" scheme="https://itblognet.github.io/tags/UML/"/>
     
   </entry>
   
   <entry>
-    <title>Redis常见使用场景</title>
-    <link href="https://itblognet.github.io/2020/06/29/redis-chang-jian-shi-yong-chang-jing/"/>
-    <id>https://itblognet.github.io/2020/06/29/redis-chang-jian-shi-yong-chang-jing/</id>
-    <published>2020-06-29T10:00:00.000Z</published>
-    <updated>2020-06-29T08:12:13.163Z</updated>
+    <title>仿哔哩哔哩</title>
+    <link href="https://itblognet.github.io/2020/11/03/fang-bi-li-bi-li/"/>
+    <id>https://itblognet.github.io/2020/11/03/fang-bi-li-bi-li/</id>
+    <published>2020-11-03T11:30:00.000Z</published>
+    <updated>2020-11-21T09:29:00.803Z</updated>
     
     <summary type="html">
     
@@ -110,17 +110,45 @@
       
         
         
-          &lt;h2 id=&quot;Redis常见使用场景&quot;&gt;&lt;a href=&quot;#Redis常见使用场景&quot; class=&quot;headerlink&quot; title=&quot;Redis常见使用场景&quot;&gt;&lt;/a&gt;Redis常见使用场景&lt;/h2&gt;&lt;p&gt;Redis是一个开源的使用ANSI
+          &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h4 id=&quot;Navi-jsp&quot;&gt;&lt;a href=&quot;#Navi-jsp&quot; class=&quot;headerlink&quot; title=&quot;Navi.jsp&quot;&gt;&lt;/a&gt;Navi.jsp&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;%@ page
         
       
     
     </summary>
     
     
-      <category term="Redis" scheme="https://itblognet.github.io/categories/Redis/"/>
+      <category term="JSP" scheme="https://itblognet.github.io/categories/JSP/"/>
     
     
-      <category term="Redis" scheme="https://itblognet.github.io/tags/Redis/"/>
+      <category term="JSP" scheme="https://itblognet.github.io/tags/JSP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图书管理系统</title>
+    <link href="https://itblognet.github.io/2020/11/01/tu-shu-guan-li-xi-tong/"/>
+    <id>https://itblognet.github.io/2020/11/01/tu-shu-guan-li-xi-tong/</id>
+    <published>2020-11-01T11:00:00.000Z</published>
+    <updated>2020-11-21T09:08:23.304Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;图书管理系统描述&quot;&gt;&lt;a href=&quot;#图书管理系统描述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="UML" scheme="https://itblognet.github.io/categories/UML/"/>
+    
+    
+      <category term="UML" scheme="https://itblognet.github.io/tags/UML/"/>
     
   </entry>
   
