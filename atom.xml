@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itblognet.github.io/"/>
-  <updated>2020-11-21T09:05:21.616Z</updated>
+  <updated>2020-11-25T09:35:55.148Z</updated>
   <id>https://itblognet.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>图书管理系统需求调研提纲</title>
-    <link href="https://itblognet.github.io/2020/11/11/tu-shu-guan-li-xi-tong-xu-qiu-diao-yan-ti-gang/"/>
-    <id>https://itblognet.github.io/2020/11/11/tu-shu-guan-li-xi-tong-xu-qiu-diao-yan-ti-gang/</id>
-    <published>2020-11-11T14:00:00.000Z</published>
-    <updated>2020-11-21T09:05:21.616Z</updated>
+    <title>品优购</title>
+    <link href="https://itblognet.github.io/2020/11/25/pin-you-gou/"/>
+    <id>https://itblognet.github.io/2020/11/25/pin-you-gou/</id>
+    <published>2020-11-25T10:00:00.000Z</published>
+    <updated>2020-11-25T09:35:55.148Z</updated>
     
     <summary type="html">
     
@@ -29,17 +29,44 @@
       
         
         
-          &lt;h2 id=&quot;图书管理系统需求调研提纲&quot;&gt;&lt;a href=&quot;#图书管理系统需求调研提纲&quot; class=&quot;headerlink&quot; title=&quot;图书管理系统需求调研提纲&quot;&gt;&lt;/a&gt;图书管理系统需求调研提纲&lt;/h2&gt;&lt;h4 id=&quot;一、总体需求分析&quot;&gt;&lt;a
+          &lt;h4 id=&quot;网盘源码链接：链接：https-pan-baidu-com-s-13uvedoLfu8MYJy-ceaCWUQ&quot;&gt;&lt;a href=&quot;#网盘源码链接：链接：https-pan-baidu-com-s-13uvedoLfu8MYJy-ceaCWUQ&quot;
         
       
     
     </summary>
     
     
-      <category term="UML" scheme="https://itblognet.github.io/categories/UML/"/>
+      <category term="HTML+CSS" scheme="https://itblognet.github.io/categories/HTML-CSS/"/>
     
     
-      <category term="UML" scheme="https://itblognet.github.io/tags/UML/"/>
+      <category term="HTML+CSS" scheme="https://itblognet.github.io/tags/HTML-CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学成在线</title>
+    <link href="https://itblognet.github.io/2020/11/19/xue-cheng-zai-xian/"/>
+    <id>https://itblognet.github.io/2020/11/19/xue-cheng-zai-xian/</id>
+    <published>2020-11-19T00:00:00.000Z</published>
+    <updated>2020-11-25T09:36:21.465Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;网盘源码链接：https-pan-baidu-com-s-1Ji1gqaI5iU3-PiCDebhyMQ&quot;&gt;&lt;a href=&quot;#网盘源码链接：https-pan-baidu-com-s-1Ji1gqaI5iU3-PiCDebhyMQ&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="HTML+CSS" scheme="https://itblognet.github.io/categories/HTML-CSS/"/>
+    
+    
+      <category term="HTML+CSS" scheme="https://itblognet.github.io/tags/HTML-CSS/"/>
     
   </entry>
   
@@ -71,11 +98,38 @@
   </entry>
   
   <entry>
+    <title>图书管理系统需求调研提纲</title>
+    <link href="https://itblognet.github.io/2020/11/11/tu-shu-guan-li-xi-tong-xu-qiu-diao-yan-ti-gang/"/>
+    <id>https://itblognet.github.io/2020/11/11/tu-shu-guan-li-xi-tong-xu-qiu-diao-yan-ti-gang/</id>
+    <published>2020-11-10T18:00:00.000Z</published>
+    <updated>2020-11-25T09:38:35.583Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;图书管理系统需求调研提纲&quot;&gt;&lt;a href=&quot;#图书管理系统需求调研提纲&quot; class=&quot;headerlink&quot; title=&quot;图书管理系统需求调研提纲&quot;&gt;&lt;/a&gt;图书管理系统需求调研提纲&lt;/h2&gt;&lt;h4 id=&quot;一、总体需求分析&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="UML" scheme="https://itblognet.github.io/categories/UML/"/>
+    
+    
+      <category term="UML" scheme="https://itblognet.github.io/tags/UML/"/>
+    
+  </entry>
+  
+  <entry>
     <title>图书管理系统软件开发模型确认</title>
-    <link href="https://itblognet.github.io/2020/11/05/tu-shu-guan-li-xi-tong-ruan-jian-kai-fa-mo-xing-que-ren/"/>
-    <id>https://itblognet.github.io/2020/11/05/tu-shu-guan-li-xi-tong-ruan-jian-kai-fa-mo-xing-que-ren/</id>
-    <published>2020-11-05T10:00:00.000Z</published>
-    <updated>2020-11-21T09:07:59.980Z</updated>
+    <link href="https://itblognet.github.io/2020/11/06/tu-shu-guan-li-xi-tong-ruan-jian-kai-fa-mo-xing-que-ren/"/>
+    <id>https://itblognet.github.io/2020/11/06/tu-shu-guan-li-xi-tong-ruan-jian-kai-fa-mo-xing-que-ren/</id>
+    <published>2020-11-06T05:00:00.000Z</published>
+    <updated>2020-11-25T09:38:23.432Z</updated>
     
     <summary type="html">
     
@@ -102,7 +156,7 @@
     <link href="https://itblognet.github.io/2020/11/03/fang-bi-li-bi-li/"/>
     <id>https://itblognet.github.io/2020/11/03/fang-bi-li-bi-li/</id>
     <published>2020-11-03T11:30:00.000Z</published>
-    <updated>2020-11-21T09:29:00.803Z</updated>
+    <updated>2020-11-25T04:30:40.595Z</updated>
     
     <summary type="html">
     
@@ -149,6 +203,60 @@
     
     
       <category term="UML" scheme="https://itblognet.github.io/tags/UML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MATLAB测试</title>
+    <link href="https://itblognet.github.io/2020/06/11/matlab-ce-shi/"/>
+    <id>https://itblognet.github.io/2020/06/11/matlab-ce-shi/</id>
+    <published>2020-06-11T04:00:00.000Z</published>
+    <updated>2020-11-22T11:39:52.239Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-求极限&quot;&gt;&lt;a href=&quot;#1-求极限&quot; class=&quot;headerlink&quot; title=&quot;1.求极限&quot;&gt;&lt;/a&gt;1.求极限&lt;/h4&gt;&lt;h6 id=&quot;（1）&quot;&gt;&lt;a href=&quot;#（1）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="MATLAB" scheme="https://itblognet.github.io/categories/MATLAB/"/>
+    
+    
+      <category term="MATLAB" scheme="https://itblognet.github.io/tags/MATLAB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>定积分及三维图形绘制</title>
+    <link href="https://itblognet.github.io/2020/06/11/ding-ji-fen-ji-san-wei-tu-xing-hui-zhi/"/>
+    <id>https://itblognet.github.io/2020/06/11/ding-ji-fen-ji-san-wei-tu-xing-hui-zhi/</id>
+    <published>2020-06-11T04:00:00.000Z</published>
+    <updated>2020-11-22T11:47:01.739Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;一、求下列定积分&quot;&gt;&lt;a href=&quot;#一、求下列定积分&quot; class=&quot;headerlink&quot; title=&quot;一、求下列定积分&quot;&gt;&lt;/a&gt;一、求下列定积分&lt;/h4&gt;&lt;h6 id=&quot;1、&quot;&gt;&lt;a href=&quot;#1、&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="MATLAB" scheme="https://itblognet.github.io/categories/MATLAB/"/>
+    
+    
+      <category term="MATLAB" scheme="https://itblognet.github.io/tags/MATLAB/"/>
     
   </entry>
   
